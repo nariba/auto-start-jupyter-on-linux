@@ -1,0 +1,12 @@
+[Unit]
+Description = jupyter notebook service
+After=local-fs.target
+ConditionPathExists=/opt/anaconda3
+
+[Service]
+ExecStart=/opt/anaconda3/bin/jupyter-notebook --allow-root --no-browser --notebook-dir=/home/nariba
+Restart=no
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
