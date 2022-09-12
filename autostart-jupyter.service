@@ -4,7 +4,7 @@ After=local-fs.target
 ConditionPathExists=/opt/anaconda3
 
 [Service]
-ExecStart=/opt/anaconda3/bin/jupyter-notebook --allow-root --no-browser --notebook-dir=/home/nariba
+ExecStart=/opt/anaconda3/bin/jupyter-notebook --allow-root --no-browser --notebook-dir=/home/nariba --ip=192.168.0.3
 Restart=no
 Type=simple
 
